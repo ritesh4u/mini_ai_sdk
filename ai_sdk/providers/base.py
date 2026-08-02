@@ -1,9 +1,10 @@
 
+from collections.abc import Sequence
 from ai_sdk.message import Message
-from abc import abstractmethod
-from abc import ABC
+from abc import ABC, abstractmethod
 class LLMProvider(ABC):
+    """Base interface for all LLM providers."""
     @abstractmethod
-    def generate(self,history:list[Message],message:Message)->Message:
+    def generate(self,history:Sequence[Message],message:str)->Message:
         pass
         
