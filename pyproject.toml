@@ -1,0 +1,14 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "mini-ai-sdk"
+version = "0.1.0"
+description = "Mini AI SDK built while learning AI Engineering"
+authors = [
+    { name = "Ritesh Niwane" }
+]
+requires-python = ">=3.11"
+
+dependencies = []
