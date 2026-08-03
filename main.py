@@ -6,4 +6,6 @@ tutor_agent=Agent("Python Tutor","You teach Python",mock_provider)
 
 tutor_agent.chat("Hello")
 tutor_agent.chat("What is Python?")
-print(tutor_agent.history())
+# print(tutor_agent.history())
+
+tutor_agent.stream()
