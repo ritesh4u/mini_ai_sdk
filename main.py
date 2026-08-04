@@ -8,4 +8,5 @@ tutor_agent.chat("Hello")
 tutor_agent.chat("What is Python?")
 # print(tutor_agent.history())
 
-tutor_agent.stream()
+for chunk in tutor_agent.stream("Hello from Stream"):
+    print(chunk.content)

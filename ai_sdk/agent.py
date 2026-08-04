@@ -23,7 +23,8 @@ class Agent:
         self.messages.append(llm_response.message)
         return llm_response.message
 
-    def stream(self)->Iterator[LLMChunk]:
+    def stream(self,message:str)->Iterator[LLMChunk]:
+        self.messages.append(Message(Role.USER,message))
         chunk=self.provider.stream(self.history())
         llm_chunk=[]
         for c in chunk:
